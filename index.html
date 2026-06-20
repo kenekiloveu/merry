@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>For You 💛💗</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=Quicksand:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="bg">
+    <div class="glow glow-pink"></div>
+    <div class="glow glow-yellow"></div>
+    <div class="hearts" aria-hidden="true"></div>
+  </div>
+
+  <main class="page" id="page">
+
+    <!-- Intro -->
+    <section class="screen active" id="screen-intro">
+      <p class="eyebrow">a little something for you</p>
+      <h1>Hey, beautiful</h1>
+      <p class="lead">
+        I've been thinking about us a lot lately… and there's something I really want to ask you.
+      </p>
+      <button class="btn btn-primary" id="btn-open">Open this 💌</button>
+    </section>
+
+    <!-- Letter -->
+    <section class="screen" id="screen-letter">
+      <div class="letter">
+        <p class="letter-greeting">My love,</p>
+        <p>
+          I know things haven't been easy, and I don't take that lightly. But you still mean the world to me — every laugh, every memory, every little moment we shared.
+        </p>
+        <p>
+          I'd love a second chance. Not to repeat the past, but to build something better — together, honestly, and with a lot more care.
+        </p>
+        <p class="letter-highlight">
+          Will you give us another try… and go on a date with me?
+        </p>
+        <p class="letter-note">
+          And don't worry — <strong>you get to pick</strong> when we go, where we go, and what you want to do. 💛
+        </p>
+        <p class="letter-sign">— Isaac, with all my heart</p>
+      </div>
+      <button class="btn btn-secondary" id="btn-ask">I have a question for you…</button>
+    </section>
+
+    <!-- Question -->
+    <section class="screen" id="screen-question">
+      <h2>So… what do you say?</h2>
+      <p class="sub">Pick the right answer 😊</p>
+      <div class="choices">
+        <button class="btn btn-yes" id="btn-yes">Yes! 💛💗</button>
+        <button class="btn btn-no" id="btn-no">No</button>
+      </div>
+    </section>
+
+    <!-- Success + her choices -->
+    <section class="screen" id="screen-yes">
+      <div class="celebration" aria-hidden="true"></div>
+      <h2>You just made my whole day!</h2>
+      <p class="sub">Now tell me what <em>you</em> want — your dream date, your way.</p>
+
+      <form class="wish-form" id="wish-form">
+        <div class="field">
+          <label for="input-when">
+            <span class="field-icon">📅</span>
+            When do you want to go?
+          </label>
+          <input type="text" id="input-when" name="when" placeholder="e.g. Friday at 8pm, or next weekend…" autocomplete="off" />
+        </div>
+
+        <div class="field">
+          <label for="input-where">
+            <span class="field-icon">📍</span>
+            Where do you want to go?
+          </label>
+          <input type="text" id="input-where" name="where" placeholder="e.g. our favorite café, the beach, anywhere…" autocomplete="off" />
+        </div>
+
+        <div class="field">
+          <label for="input-what">
+            <span class="field-icon">💭</span>
+            What would you love to do?
+          </label>
+          <textarea id="input-what" name="what" rows="3" placeholder="Dinner, a walk, movies, ice cream — write anything you want…"></textarea>
+        </div>
+
+        <p class="form-hint" id="form-error" hidden>Write at least when or where you'd like to go 💛</p>
+
+        <button type="submit" class="btn btn-primary btn-full">Send my answer 💌</button>
+      </form>
+
+      <div class="date-card" id="summary-card" hidden>
+        <p class="date-label">Your perfect date 💛💗</p>
+
+        <div class="date-plan date-plan-card">
+          <div class="date-row">
+            <span class="date-icon">📅</span>
+            <div>
+              <p class="date-row-label">When</p>
+              <p class="date-row-value" id="summary-when"></p>
+            </div>
+          </div>
+          <div class="date-row">
+            <span class="date-icon">📍</span>
+            <div>
+              <p class="date-row-label">Where</p>
+              <p class="date-row-value" id="summary-where"></p>
+            </div>
+          </div>
+          <div class="date-row" id="summary-what-row" hidden>
+            <span class="date-icon">💭</span>
+            <div>
+              <p class="date-row-label">What I'd love</p>
+              <p class="date-row-value" id="summary-what"></p>
+            </div>
+          </div>
+        </div>
+
+        <p class="date-note">DM <strong>@honestly__isaac</strong> on Instagram so I can plan everything for you 💛</p>
+
+        <div class="send-actions">
+          <button type="button" class="btn btn-primary" id="btn-copy">Copy message</button>
+          <a class="btn btn-secondary" id="btn-instagram" href="https://www.instagram.com/honestly__isaac/" target="_blank" rel="noopener">DM @honestly__isaac</a>
+        </div>
+        <p class="copy-toast" id="copy-toast" hidden>Copied! Paste it in my DMs 💛</p>
+      </div>
+
+      <p class="footer-note">From Isaac — @honestly__isaac 💛💗</p>
+    </section>
+
+  </main>
+
+  <canvas id="confetti" aria-hidden="true"></canvas>
+
+  <script src="script.js"></script>
+</body>
+</html>
